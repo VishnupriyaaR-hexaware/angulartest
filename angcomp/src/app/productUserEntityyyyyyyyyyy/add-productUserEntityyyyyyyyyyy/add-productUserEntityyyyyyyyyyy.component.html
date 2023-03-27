@@ -1,0 +1,23 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Add Form</h4>
+    <form [formGroup]="form" (ngSubmit)="add()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Puid</mat-label>
+        <input matInput formControlName="puid" />
+        <mat-error *ngIf="handleError('puid', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Puname</mat-label>
+        <input matInput formControlName="puname" />
+        <mat-error *ngIf="handleError('puname', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>

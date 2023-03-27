@@ -1,0 +1,56 @@
+<div class="button">
+  <button
+    mat-raised-button
+    routerLink="/add-projectClientEntityyyyyyyyy/"
+    color="primary"
+  >
+    Add ProjectClientEntityyyyyyyyy
+  </button>
+</div>
+<mat-card>
+  <mat-card-content>
+    <h4 class="mb-56">ProjectClientEntityyyyyyyyy</h4>
+    <div>
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="pcid">
+          <th mat-header-cell *matHeaderCellDef>Pcid</th>
+          <td mat-cell *matCellDef="let element">{{ element.pcid }}</td>
+        </ng-container>
+        <ng-container matColumnDef="pcname">
+          <th mat-header-cell *matHeaderCellDef>Pcname</th>
+          <td mat-cell *matCellDef="let element">{{ element.pcname }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let element; let i = index">
+            <button
+              mat-icon-button
+              color="primary"
+              class="push-right"
+              [routerLink]="['/edit-projectClientEntityyyyyyyyy/', element.id]"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="delete(i, element.id)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </mat-card-content>
+</mat-card>
