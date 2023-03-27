@@ -1,0 +1,136 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Edit Form</h4>
+    <form [formGroup]="form" (ngSubmit)="edit()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>AgencyName</mat-label>
+        <input
+          matInput
+          formControlName="AgencyName"
+          [(ngModel)]="data.AgencyName"
+        />
+        <mat-error *ngIf="handleError('AgencyName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>FirstName</mat-label>
+        <input
+          matInput
+          formControlName="FirstName"
+          [(ngModel)]="data.FirstName"
+        />
+        <mat-error *ngIf="handleError('FirstName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>LastName</mat-label>
+        <input
+          matInput
+          formControlName="LastName"
+          [(ngModel)]="data.LastName"
+        />
+        <mat-error *ngIf="handleError('LastName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>TaxId</mat-label>
+        <input matInput formControlName="TaxId" [(ngModel)]="data.TaxId" />
+        <mat-error *ngIf="handleError('TaxId', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>NPN</mat-label>
+        <input matInput formControlName="NPN" [(ngModel)]="data.NPN" />
+        <mat-error *ngIf="handleError('NPN', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>WritingCode</mat-label>
+        <input
+          matInput
+          formControlName="WritingCode"
+          [(ngModel)]="data.WritingCode"
+        />
+        <mat-error *ngIf="handleError('WritingCode', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>UserName</mat-label>
+        <input
+          matInput
+          formControlName="UserName"
+          [(ngModel)]="data.UserName"
+        />
+        <mat-error *ngIf="handleError('UserName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="Password"
+          [(ngModel)]="data.Password"
+        />
+        <mat-error *ngIf="handleError('Password', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>SecretImage</mat-label>
+        <input
+          matInput
+          formControlName="SecretImage"
+          [(ngModel)]="data.SecretImage"
+        />
+        <mat-error *ngIf="handleError('SecretImage', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="Email" [(ngModel)]="data.Email" />
+        <mat-error *ngIf="handleError('Email', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="Phone" [(ngModel)]="data.Phone" />
+        <mat-error *ngIf="handleError('Phone', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>HasAcceptedEula</mat-label>
+        <mat-select
+          formControlName="HasAcceptedEula"
+          [(ngModel)]="data.HasAcceptedEula"
+        >
+          <mat-option value="True">True</mat-option>
+          <mat-option value="False">False</mat-option>
+        </mat-select>
+        <mat-error *ngIf="handleError('HasAcceptedEula', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Edit</button>
+    </form>
+  </mat-card-content>
+</mat-card>
