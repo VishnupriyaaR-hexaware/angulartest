@@ -1,0 +1,55 @@
+<mat-card class="w-100">
+  <mat-card-content>
+    <h4 class="mb-56">Add Form</h4>
+    <form [formGroup]="form" (ngSubmit)="add()">
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>AgencyName</mat-label>
+        <input matInput formControlName="AgencyName" />
+        <mat-error *ngIf="handleError('AgencyName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>FirstName</mat-label>
+        <input matInput formControlName="FirstName" />
+        <mat-error *ngIf="handleError('FirstName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>LastName</mat-label>
+        <input matInput formControlName="LastName" />
+        <mat-error *ngIf="handleError('LastName', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>TaxId</mat-label>
+        <input matInput formControlName="TaxId" />
+        <mat-error *ngIf="handleError('TaxId', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>NPN</mat-label>
+        <input matInput formControlName="NPN" />
+        <mat-error *ngIf="handleError('NPN', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-100 fs-16" appearance="outline">
+        <mat-label>WritingCode</mat-label>
+        <input matInput formControlName="WritingCode" />
+        <mat-error *ngIf="handleError('WritingCode', 'required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Add</button>
+    </form>
+  </mat-card-content>
+</mat-card>
